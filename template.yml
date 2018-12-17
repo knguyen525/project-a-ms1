@@ -23,6 +23,15 @@ Parameters:
 #       Type: Canary10Percent5Minutes
 
 Resources:
+  HellowWorldPerms:
+    Type: AWS::Lambda::Permission
+    DependsOn:
+      - ApiGateway
+      - HelloWorld
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref HelloWorld
+      Principal: apigateway.amazonaws.com
   HelloWorld:
     Type: AWS::Serverless::Function
     Properties:
@@ -43,15 +52,6 @@ Resources:
           Properties:
             Path: /
             Method: post
-   HellowWorldPerms:
-    Type: AWS::Lambda::Permission
-    DependsOn:
-      - ApiGateway
-      - HelloWorld
-    Properties:
-      Action: lambda:InvokeFunction
-      FunctionName: !Ref HelloWorld
-      Principal: apigateway.amazonaws.com
   LambdaExecutionRole:
     Description: Creating service role in IAM for AWS Lambda
     Type: AWS::IAM::Role
