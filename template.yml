@@ -29,12 +29,7 @@ Resources:
       StageName: Stage
       Variables:
         GetRatings: !Ref HelloWorld
-      DefinitionBody: 
-        Fn::Transform:
-          Name: AWS::Include
-          Parameters:            
-            Location: 
-              Fn::Sub: 's3://kpn-api-repo/swagger.yml'    
+      DefinitionUri: swagger.yml'    
   HelloWorld:
     Type: AWS::Serverless::Function
     Properties:
