@@ -31,27 +31,10 @@ Resources:
       Action: lambda:InvokeFunction
       FunctionName: !Ref HelloWorld
       Principal: apigateway.amazonaws.com
-  HellowWorld2Perms:
-    Type: AWS::Lambda::Permission
-    DependsOn:
-      - HelloWorld2
-    Properties:
-      Action: lambda:InvokeFunction
-      FunctionName: !Ref HelloWorld2
-      Principal: apigateway.amazonaws.com
   HelloWorld:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
-      Runtime: python3.6
-      Role:
-        Fn::GetAtt:
-        - LambdaExecutionRole
-        - Arn
-  HelloWorld2:
-    Type: AWS::Serverless::Function
-    Properties:
-      Handler: index.handler2
       Runtime: python3.6
       Role:
         Fn::GetAtt:
