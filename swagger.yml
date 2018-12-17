@@ -3,7 +3,7 @@ info:
   version: "1.0"
   title: "awscodestar-project-a-api-lambda"
 host: "si7zd23917.execute-api.us-west-2.amazonaws.com"
-basePath: "/Stage"
+basePath: "/qa"
 schemes:
 - "https"
 paths:
