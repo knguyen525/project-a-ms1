@@ -26,7 +26,6 @@ Resources:
   HellowWorldPerms:
     Type: AWS::Lambda::Permission
     DependsOn:
-      - ApiGateway
       - HelloWorld
     Properties:
       Action: lambda:InvokeFunction
