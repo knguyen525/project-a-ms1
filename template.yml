@@ -23,6 +23,18 @@ Parameters:
 #       Type: Canary10Percent5Minutes
 
 Resources:
+  ApiGatewayApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Stage
+      Variables:
+        GetRatings: !Ref HelloWorld
+      DefinitionBody: 
+        Fn::Transform:
+          Name: AWS::Include
+          Parameters:            
+            Location: 
+              Fn::Sub: 's3://kpn-api-repo/swagger.yml'    
   HelloWorld:
     Type: AWS::Serverless::Function
     Properties:
