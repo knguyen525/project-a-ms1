@@ -29,7 +29,7 @@ Resources:
       StageName: Stage
       Variables:
         GetRatings: !Ref HelloWorld
-      DefinitionUri: swagger.yml'    
+      DefinitionUri: swagger.yml
   HelloWorld:
     Type: AWS::Serverless::Function
     Properties:
