@@ -4,9 +4,8 @@
 
 Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
 
-Fixes # (issue)
 
-JIRA Ticket Number: <input type="text" name="JIRA ticket number" value="test"/>
+JIRA Ticket Number: [Enter your ticket number here ie NCS-123]
 
 ## Type of change
 
