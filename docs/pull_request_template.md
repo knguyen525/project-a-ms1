@@ -6,6 +6,8 @@ Please include a summary of the change and which issue is fixed. Please also inc
 
 Fixes # (issue)
 
+JIRA Ticket Number: <input type="text" name="JIRA ticket number"/>
+
 ## Type of change
 
 Please delete options that are not relevant.
