@@ -6,7 +6,7 @@ Please include a summary of the change and which issue is fixed. Please also inc
 
 Fixes # (issue)
 
-JIRA Ticket Number: <input type="text" name="JIRA ticket number"/>
+JIRA Ticket Number: <input type="text" name="JIRA ticket number" value="test"/>
 
 ## Type of change
 
